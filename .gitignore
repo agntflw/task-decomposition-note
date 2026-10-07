@@ -1,1 +1,48 @@
+# OS
 .DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Decomposition runtime state (mirrors .gitignore.fragment)
+.harness/decomposition/runtime/*
+!.harness/decomposition/runtime/.gitkeep
+!.harness/decomposition/runtime/sessions/
+!.harness/decomposition/runtime/leases/
+.harness/decomposition/runtime/sessions/*
+.harness/decomposition/runtime/leases/*
+!.harness/decomposition/runtime/sessions/.gitkeep
+!.harness/decomposition/runtime/leases/.gitkeep
+
+# Hook audit and raw evidence may contain verbose/local material
+.harness/decomposition/audit/*.jsonl
+.harness/decomposition/evidence/raw/**
+!.harness/decomposition/evidence/raw/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
